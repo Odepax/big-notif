@@ -9,9 +9,16 @@
 	WindowState="Maximized"
 	ResizeMode="NoResize"
 	WindowStyle="None"
+	Foreground="White"
 >
 	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-		<TextBlock Text="It's 20:06" FontFamily="Tintin" FontSize="24" Foreground="White" />
-		<TextBlock Text="Take a Break" FontFamily="Tintin" FontSize="56" Foreground="White" />
+		<StackPanel.Resources>
+			<Style TargetType="TextBlock">
+				<Setter Property="FontFamily" Value="pack://application:,,,/Resources/#Alegreya Sans SC Black" />
+				<Setter Property="FontWeight" Value="900" />
+			</Style>
+		</StackPanel.Resources>
+		<TextBlock Text="It's 20:06" FontSize="24" />
+		<TextBlock Text="Take a Break" FontSize="60" />
 	</StackPanel>
 </Window>
