@@ -21,6 +21,14 @@ namespace Odepax.BigNotif
 		{
 			InitializeComponent();
 
+			var random = new Random();
+
+			Background = new SolidColorBrush(Color.FromRgb(
+				(byte)random.Next(150),
+				(byte)random.Next(150),
+				(byte)random.Next(150)
+			));
+
 			TimeText.Text = "It's " + DateTime.Now.ToShortTimeString();
 		}
 	}
