@@ -20,6 +20,8 @@ namespace Odepax.BigNotif
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			TimeText.Text = "It's " + DateTime.Now.ToShortTimeString();
 		}
 	}
 }

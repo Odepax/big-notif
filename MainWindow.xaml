@@ -18,7 +18,7 @@
 				<Setter Property="FontWeight" Value="900" />
 			</Style>
 		</StackPanel.Resources>
-		<TextBlock Text="It's 20:06" FontSize="24" />
+		<TextBlock x:Name="TimeText" Text="Yawn!" FontSize="24" />
 		<TextBlock Text="Take a Break" FontSize="60" />
 	</StackPanel>
 </Window>
