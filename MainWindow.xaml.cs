@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +42,22 @@ namespace Odepax.BigNotif
 			else if (args.Length == 2)
 			{
 				MessageText.Text = args[1];
+			}
+		}
+
+		private void OpenBrowserOnGithubRepo(object sender, RequestNavigateEventArgs @event)
+		{
+			try
+			{
+				Process.Start(@event.Uri.AbsoluteUri);
+
+				Application.Current.Shutdown(0);
+			}
+			catch
+			{
+				GithubLinkText.Text = "Unable to open browser, copy this link instead:";
+				
+				Topmost = false;
 			}
 		}
 	}
