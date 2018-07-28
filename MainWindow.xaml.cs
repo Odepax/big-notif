@@ -30,6 +30,17 @@ namespace Odepax.BigNotif
 			));
 
 			TimeText.Text = "It's " + DateTime.Now.ToShortTimeString();
+
+			string[] args = Environment.GetCommandLineArgs();
+
+			if (args.Length == 3 && args[1].Equals("-Message"))
+			{
+				MessageText.Text = args[2];
+			}
+			else if (args.Length == 2)
+			{
+				MessageText.Text = args[1];
+			}
 		}
 	}
 }

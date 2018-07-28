@@ -19,6 +19,6 @@
 			</Style>
 		</StackPanel.Resources>
 		<TextBlock x:Name="TimeText" Text="Yawn!" FontSize="24" />
-		<TextBlock Text="Take a Break" FontSize="60" />
+		<TextBlock x:Name="MessageText" Text="Big Notif" FontSize="60" />
 	</StackPanel>
 </Window>
