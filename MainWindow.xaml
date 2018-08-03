@@ -13,24 +13,26 @@
 >
 	<DockPanel LastChildFill="True">
 		<StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,16">
-			<TextBlock x:Name="GithubLinkText"
+			<TextBlock
+				x:Name="GithubLinkText"
 				Margin="0,0,8,0"
 				FontFamily="pack://application:,,,/Resources/#Alegreya Sans SC Medium"
 				FontSize="16"
-				FontWeight="500" VerticalAlignment="Center"
+				FontWeight="500"
+				VerticalAlignment="Center"
+				Cursor="Hand"
+				TextDecorations="Underline"
+				MouseUp="GithubLinkText_MouseUp"
 			>
-				<Hyperlink
-					NavigateUri="https://github.com/Odepax/big-notif"
-					RequestNavigate="OpenBrowserOnGithubRepo"
-					Foreground="White"
-				>Github</Hyperlink>:
+				Github:
 			</TextBlock>
 			<TextBox
 				Text="https://github.com/Odepax/big-notif"
 				IsReadOnly="True"
 				IsTabStop="False"
-				FontSize="16"
 				FontFamily="/Odepax.BigNotif;component/Resources/#Alegreya Sans SC Medium"
+				FontSize="16"
+				FontWeight="500"
 				Margin="0,0,24,0"
 				VerticalAlignment="Top"
 				Padding="4"

@@ -45,18 +45,18 @@ namespace Odepax.BigNotif
 			}
 		}
 
-		private void OpenBrowserOnGithubRepo(object sender, RequestNavigateEventArgs @event)
+		private void GithubLinkText_MouseUp(object sender, MouseButtonEventArgs e)
 		{
 			try
 			{
-				Process.Start(@event.Uri.AbsoluteUri);
+				Process.Start("https://github.com/Odepax/big-notif");
 
 				Application.Current.Shutdown(0);
 			}
 			catch
 			{
 				GithubLinkText.Text = "Unable to open browser, copy this link instead:";
-				
+
 				Topmost = false;
 			}
 		}
