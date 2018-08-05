@@ -60,5 +60,10 @@ namespace Odepax.BigNotif
 				Topmost = false;
 			}
 		}
+
+		private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
+		{
+			Application.Current.Shutdown(0);
+		}
 	}
 }

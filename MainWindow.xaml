@@ -12,6 +12,30 @@
 	Foreground="White"
 >
 	<DockPanel LastChildFill="True">
+		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,24,0">
+			<TextBlock
+				FontFamily="pack://application:,,,/Resources/#Alegreya Sans SC Medium"
+				FontSize="16"
+				FontWeight="500"
+				Foreground="White"
+				Text="Close"
+				Padding="4"
+				TextAlignment="Center"
+				Cursor="Hand"
+				MouseUp="TextBlock_MouseUp"
+			>
+				<TextBlock.Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="Background" Value="#66000000" />
+						<Style.Triggers>
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter Property="Background" Value="#FF960008" />
+							</Trigger>
+						</Style.Triggers>
+					</Style>
+				</TextBlock.Style>
+			</TextBlock>
+		</StackPanel>
 		<StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,16">
 			<TextBlock
 				x:Name="GithubLinkText"
