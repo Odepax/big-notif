@@ -1,19 +1,9 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Odepax.BigNotif
 {
@@ -23,6 +13,14 @@ namespace Odepax.BigNotif
 		{
 			InitializeComponent();
 
+			InitializeRandomBackground();
+			InitializeCurrentTimeDisplay();
+			InitializeNotificationMessageDisplay();
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private void InitializeRandomBackground()
+		{
 			var random = new Random();
 
 			Background = new SolidColorBrush(Color.FromRgb(
@@ -30,9 +28,17 @@ namespace Odepax.BigNotif
 				(byte)random.Next(150),
 				(byte)random.Next(150)
 			));
+		}
 
-			TimeText.Text = "It's " + DateTime.Now.ToShortTimeString();
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private void InitializeCurrentTimeDisplay()
+		{
+			TimeTextBlock.Text = "It's " + DateTime.Now.ToShortTimeString();
+		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private void InitializeNotificationMessageDisplay()
+		{
 			string[] args = Environment.GetCommandLineArgs();
 
 			if (args.Length == 3 && args[1].Equals("-Message"))
@@ -45,23 +51,24 @@ namespace Odepax.BigNotif
 			}
 		}
 
-		private void GithubLinkText_MouseUp(object sender, MouseButtonEventArgs e)
+		private void OpenGithubRepo(object sender, MouseButtonEventArgs e)
 		{
 			try
 			{
+				// Opens the browser.
 				Process.Start("https://github.com/Odepax/big-notif");
 
 				Application.Current.Shutdown(0);
 			}
 			catch
 			{
-				GithubLinkText.Text = "Unable to open browser, copy this link instead:";
+				GithubLinkTextBlock.Text = "Unable to open browser, copy this link instead:";
 
 				Topmost = false;
 			}
 		}
 
-		private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
+		private void CloseApplication(object sender, MouseButtonEventArgs e)
 		{
 			Application.Current.Shutdown(0);
 		}
