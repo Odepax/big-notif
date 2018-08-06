@@ -5,6 +5,12 @@ I usually use it in combination with the Task Scheduler:
 
 ![](./Screenshots/Task-Scheduler-Example/Tab-3-Actions.png)
 
+## Downloads
+
+See [Releases](https://github.com/Odepax/big-notif/releases).
+Available for Windows 32 & 64bit.
+Requires [.NET Framework 4.5](https://www.microsoft.com/en-US/download/details.aspx?id=30653).
+
 ## Usage
 
 ### With the Windows Tasks Scheluder
@@ -20,21 +26,6 @@ The program will display whatever is the first command-line argument passed to i
 C:\Path\To\Show-BigNotif.exe "Jerry, get a job"
 C:\Path\To\Show-BigNotif.exe -Message "Jerry, get a job"
 ```
-
-## TODO
-
-- [x] new font
-- [x] license
-- [x] real local hour
-- [x] Random bg
-- [x] message from command line
-- [x] Github link
-- [x] get rid of the hyperlink (not the link, just the <Hyperlink />)
-- [x] better way to quit
-- [x] prod build
-- [x] task scheduler sceenshots
-- [x] readme
-- [ ] release 1.0.0
 
 ## Font Credit
 
