@@ -1,3 +1,5 @@
+![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-green.svg?style=for-the-badge)
+
 # Big Notif
 
 A full screen notification toast, for those who easily miss their reminders.
